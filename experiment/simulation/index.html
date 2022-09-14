@@ -1,13 +1,153 @@
+<!-- Home page of simulator -->
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Viscosity VLab</title>
+</head>
+
+<body>
+    <!-- simulation -->
+    <div class="simulation" id="simulation">
+        <div class="topic">
+            <h2>VISCOSITY BY STOKE'S METHOD</h2>
+        </div>
+        <div id="content">
+            <div class="subtopics">
+                <h4>Objective:</h4>
+                <ol>
+                    <li>&ensp;To determine the coefficient of viscosity of a given viscous liquid.</li>
+                </ol>
+                <h4>Apparatus Used:</h4>
+                <p>A long cylindrical glass jar, Transparent viscous fluid, Metre scale, Spherical ball, Stop clock.</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <p>Measuring Cylinder</p><img class='img1' src="images/measuringcylinder.png"
+                        alt="measuringcylinder">
+                </div>
+                <div class="grid-item">
+                    <p>Copper Ball</p><img class='img2' src="images/copperball.png" alt="copperball">
+                </div>
+                <div class="grid-item">
+                    <p>Glass Ball</p><img class='img3' src="images/glassball.png" alt="glassball">
+                </div>
+                <div class="grid-item">
+                    <p>Stop Clock</p><img class='img4' src="images/stopclock.png" alt="stopclock">
+                </div>
+            </div>
+        </div>
+
+        <!-- content2 -->
+        <div style="display: none;" id="content2">
+            <div class="blocker" onclick="closeobservation()" id="blocker"></div>
+
+            <div class="simoptions" id="simoptions">
+                <div class="procedure">
+                    <label style="text-align:left;">Select the spherical ball:</label><br>
+                    <select name="exp" id="exp" onChange="update()">
+                        <option value="Empty" hidden>Select the Spherical Ball</option>
+                        <option value="copperball">Copper Ball</option>
+                        <option value="glassball">Glass Ball</option>
+                    </select>
+                    <label style="text-align:left;">Select viscous liquid:</label><br>
+                    <select name="exp" id="liquid" onchange="updateliquid()">
+                        <option value="Empty" hidden>Select the liquid</option>
+                        <option value="glycerine">Glycerine</option>
+                        <option value="water">Water</option>
+                        <option value="honey">Honey</option>
+                    </select>
+                </div>
+                <div class="insert-reset-observation">
+                    <button id="insert" type="button" onclick="insert()">Insert Ball</button>
+                    <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Remove
+                        Ball</button>
+                </div>
+                <div class="balldiameter">
+                    <p>Select the Ball diameter:</p>
+                    <input type="range" min="25" max="35" value="5" class="slider" id="Slider">
+                </div>
+                <div class="insert-reset-observation">
+                    <button id="drop" type="button" onclick="dropball()" disabled>Drop the Ball</button>
+                </div>
+                <div class="insert-reset-observation">
+                    <button id="reset" type="reset" onclick="Refresh()">Reset</button>
+                </div>
+                <div class="help">
+                    <button type="button" onclick="help()"><img src="images/help.png" alt="helpicon"></button>
+                </div>
+            </div>
+
+            <!-- simulation -->
+            <div class="mainsimulation" id="mainsimulation">
+                <div id="appdiv">
+                    <div id="gball2" class="gball2">
+                        <img src="images/glassball.png" alt="glassball" title="GLASS BALL" style="height: inherit;">
+                    </div>
+                    <div id="gball1" class="gball1">
+                        <img src="images/glassball.png" alt="glassball" title="GLASS BALL" style="height: inherit;">
+                    </div>
+                    <div id="gball1" class="gball1">
+                        <img src="images/glassball.png" alt="glassball" title="GLASS BALL" style="height: inherit;">
+                    </div>
+                    <img src="images/glassball.png" alt="glassball" id="glassball" class="glassball" title="GLASS BALL" style="display: none;">
+                    <div id="cball2" class="cball2">
+                        <img src="images/copperball.png" alt="copperball" title="COPPER BALL" style="height: inherit;">
+                    </div>
+                    <div id="cball1" class="cball1">
+                        <img src="images/copperball.png" alt="copperball" title="COPPER BALL" style="height: inherit;">
+                    </div>
+                    <img src="images/copperball.png" alt="copperball" id="copperball" class="copperball"
+                        title="COPPER BALL">
+                    <img src="images/stopclock.png" alt="stopclock" class="stopclock" title="STOP CLOCK">
+                    <img src="images/measuringcylinder.png" alt="measuringcylinder" class="measuringcylinder"
+                        title="MEASURING CYLINDER">
+                    <img src="images/table.png" alt="table" class="table">
+                    <img src="images/glycerine.png" alt="glycerine" id="glycerine" class="glycerine" style="display: none;">
+                    <img src="images/honey.png" alt="honey" id="honey" class="honey" style="display: none;">
+                </div>
+
+                
+                
+                
+                
+            </div>
+
+            <div id="instructions">
+                <div class="icontent">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Select the "Magnetic Field vs Current" procedure from 'Select Procedure' dropdown menu.</li>
+                        <li>Click on the 'Insert Hall Sensor' button to insert the sensor into the electromagnet.</li>
+                        <li>Click on the 'Observation' button to view the table.</li>
+                        <li>Click on the 'IBgraph' button to view the graph.</li>
+                        <li>Change the procedure to "Hall Effect" to calculate the hall voltage.</li>
+                        <li>Click on the 'Insert Probe' button to insert the probe into the electromagnet.</li>
+                    </ol>
+                </div>
+                <button type="button" onclick="closeobservation()">Close</button>
+            </div>
+        </div>
+
+        <!-- content3 -->
+        <!-- <div style="display: none;" id="content3">
+            <div id="graph"></div>
+        </div> -->
+
+        <!-- next button -->
+        <button id="buttonup" onclick="up()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
+        <button id="buttondown" onclick="down()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
+    </div>
+
+    <script>
+
+    </script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

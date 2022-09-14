@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.simulation {
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+}
+
+.simulation .topic {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.subtopics {
+  width: 100%-20px;
+  margin-left: 20px;
+  line-height: 35px;
+}
+
+.subtopics ol li {
+  margin-left: 40px;
+}
+
+.subtopics p {
+  margin-left: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
+}
+
+.img1 {
+  height: 100px;
+}
+
+.img2 {
+  padding-top: 10px;
+  height: 60px;
+}
+
+.img3 {
+  padding-top: 10px;
+  height: 60px;
+}
+
+.img4 {
+  height: 80px;
+  width: 120px;
+}
+
+
+/* next button */
+
+#buttonup {
+  border: 0;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+  background-color: white;
+}
+
+#buttondown {
+  border: 0;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  background-color: white;
+  transform: scaleX(-1);
+  display: none;
+}
+
+.nextimg {
+  width: 45px;
+  height: 45px;
+}
+
+#content {
+  width: 800px;
+  height: 500px;
+}
+
+#content2 {
+  width: 800px;
+  height: 500px;
+}
+
+.balldiameter {
+  margin: 10px;
+}
+
+
+/* options */
+
+.simoptions {
+  background-color: rgba(135, 207, 235, 0.621);
+  width: 25%;
+  height: 550px;
+  float: left;
+  filter: blur(0px);
+}
+
+.procedure {
+  margin: 10px;
+}
+
+#exp {
+  height: 35px;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219);
+  cursor: pointer;
+}
+
+#liquid {
+  height: 35px;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219);
+  cursor: pointer;
+}
+
+.insert-reset-observation {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.insert-reset-observation button {
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  /* opacity: 0.5; */
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid red;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  width: 20px;
+  height: 20px;
+}
+
+
+.blocker {
+  display: none;
+  position: absolute;
+  height: 550px;
+  width: 800px;
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.help {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 5px;
+}
+
+.help button {
+  background-color: rgb(189, 231, 249);
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.help img {
+  width: 25px;
+  height: 25px;
+}
+
+#instructions {
+  display: none;
+  height: 400px;
+  width: 700px;
+  position: absolute;
+  background-color: white;
+  top: 110px;
+  left: 45px;
+  border: black solid;
+  border-width: 3px;
+  z-index: 7;
+}
+
+.icontent {
+  margin-left: 35px;
+  line-height: 1.63rem;
+}
+
+#instructions button {
+  width: 60px;
+  height: 31px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Main Simulation */
+.mainsimulation {
+  width: 75%;
+  height: 500px;
+  float: right;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+.table {
+  height: 490px;
+  width: 600px;
+  /* background-color: rgb(189, 65, 65); */
+}
+
+#appdiv {
+  /* background-color: green; */
+  height: 490px;
+}
+
+.measuringcylinder {
+  position: absolute;
+  top: 130px;
+  left: 400px;
+  height: 350px;
+  /* width: 200px; */
+  /* background-color: blue; */
+  z-index: 3;
+}
+
+.stopclock {
+  position: absolute;
+  top: 350px;
+  left: 570px;
+  height: 100px;
+  width: 200px;
+  z-index: 3;
+}
+
+.copperball {
+  height: 30px;
+  position: absolute;
+  left: 250px;
+  top: 398px;
+  /* background-color: red; */
+  display: none;
+}
+
+#cball1 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 485px;
+  top: 95px;
+  /* background-color: yellow; */
+  display: none;
+}
+
+#cball2 {
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  left: 485px;
+  top: 389px;
+  animation-duration: 5s;
+  transition: transform .3s;
+  z-index: 1;
+  /* background-color: red; */
+  display: none;
+}
+
+.glassball {
+  /* height: 70px;
+  position: absolute;
+  left: 244px;
+  top: 390px;
+  background-color: red; */
+
+  height: 30px;
+  position: absolute;
+  left: 250px;
+  top: 398px;
+  /* background-color: red; */
+  display: none;
+}
+
+#gball1 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 485px;
+  top: 95px;
+  /* background-color: yellow; */
+  display: none;
+}
+
+#gball2 {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 485px;
+  top: 389px;
+  animation-duration: 5s;
+  transition: transform .3s;
+  z-index: 1;
+  /* background-color: red; */
+  display: none;
+}
+
+@keyframes dropping {
+  from {
+    top: 95px;
+  }
+
+  to {
+    top: 389px;
+  }
+}
+
+.glycerine{
+  position: absolute;
+  top: 168px;
+  left: 429.5px;
+  height: 288px;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.honey{
+  position: absolute;
+  top: 170px;
+  left: 426.5px;
+  height: 279px;
+  z-index: 2;
+  opacity: 0.5;
+}
