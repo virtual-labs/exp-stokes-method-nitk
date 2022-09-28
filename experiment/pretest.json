@@ -68,6 +68,23 @@
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Choose the correct statement about viscous force",
+      "answers": {
+        "a": "The viscous force is independent of velocity",
+        "b": "The viscous force depends on the velocity",
+        "c": "The viscous force is independent of density ",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     }
   ]
 }
