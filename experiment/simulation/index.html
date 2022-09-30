@@ -64,13 +64,13 @@
                     </select>
                 </div>
                 <div class="insert-reset-observation">
-                    <button id="insert" type="button" onclick="insert()">Insert Ball</button>
+                    <button id="insert" type="button" onclick="insert()" disabled>Insert Ball</button>
                     <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Remove
                         Ball</button>
                 </div>
                 <div class="balldiameter">
-                    <p>Select the Ball diameter:</p>
-                    <input type="range" min="25" max="35" value="5" class="slider" id="Slider">
+                    <p><!-- Select the  -->Ball diameter: <span id="diameter">20 mm</span></p>
+                    <input type="range" min="15" max="35" step="5" class="slider" id="Slider" hidden>
                 </div>
                 <div class="insert-reset-observation">
                     <button id="drop" type="button" onclick="dropball()" disabled>Drop the Ball</button>
@@ -78,7 +78,14 @@
                 <div class="insert-reset-observation">
                     <button id="reset" type="reset" onclick="Refresh()">Reset</button>
                 </div>
-                <div class="help">
+                <div class="insert-reset-observation">
+                    <button id="result" type="button" onclick="result()" disabled>Result</button>
+                </div>
+                <div id="resulttext" style="display: none;">
+                    <p>Coefficient of Viscosity of</p>
+                    <p><span id="resliquid"></span>,η=<span id="viscocity">00</span></p>
+                </div>
+                <div class="help" hidden> <!-- hidden for now -->
                     <button type="button" onclick="help()"><img src="images/help.png" alt="helpicon"></button>
                 </div>
             </div>
@@ -104,18 +111,31 @@
                     </div>
                     <img src="images/copperball.png" alt="copperball" id="copperball" class="copperball"
                         title="COPPER BALL">
-                    <img src="images/stopclock.png" alt="stopclock" class="stopclock" title="STOP CLOCK">
-                    <img src="images/measuringcylinder.png" alt="measuringcylinder" class="measuringcylinder"
+                    <img src="images/stopwatch.png" alt="stopclock" class="stopclock" title="STOP CLOCK">
+                    <img src="images/ncylinder.png" alt="measuringcylinder" class="measuringcylinder"
                         title="MEASURING CYLINDER">
                     <img src="images/table.png" alt="table" class="table">
                     <img src="images/glycerine.png" alt="glycerine" id="glycerine" class="glycerine" style="display: none;">
                     <img src="images/honey.png" alt="honey" id="honey" class="honey" style="display: none;">
+                    <img src="images/water1.png" alt="water" id="water" class="water" style="display: none;">
                 </div>
-
-                
-                
-                
-                
+                <div class="text">
+                    <ol>
+                        <li>Distance between A and B = 1 m.</li>
+                        <li>Density of the liquid = <span id="liquiddensity">0</span></li>
+                        <li>Density of ball = <span id="balldensity">0</span></li>
+                    </ol>
+                </div>
+                <div class="one">
+                    <p>1 m</p>
+                </div>
+                <div class="wrapper">
+                    <div id="timerbox"><p><span id="seconds">00</span>s:<span id="tens">00</span>ms</p></div>
+                    <!-- <button id="button-start">Start</button> -->
+                    <!-- <button id="button-stop">Stop</button> -->
+                    <button id="button-reset" hidden>Reset</button>
+                </div>
+   
             </div>
 
             <div id="instructions">
@@ -130,7 +150,7 @@
                         <li>Click on the 'Insert Probe' button to insert the probe into the electromagnet.</li>
                     </ol>
                 </div>
-                <button type="button" onclick="closeobservation()">Close</button>
+                <button type="button" onclick="close()">Close</button>
             </div>
         </div>
 
@@ -143,10 +163,6 @@
         <button id="buttonup" onclick="up()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
         <button id="buttondown" onclick="down()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
     </div>
-
-    <script>
-
-    </script>
     <script src="js/script.js"></script>
 </body>
 
