@@ -15,7 +15,6 @@
     Developer : Dr. K V Gangadharan | NITK</br></br>
     Contributors :
   <ul style="list-style-type: none;">
-    <li></li>
     <li>Sibeesh P.P | NITK</li>
     <li>Samar K, 21AD035 | KPRIET </li>
     <li>Praveen Samuel PM, 21CS130 | KPRIET </li>
