@@ -1,4 +1,32 @@
 
+
+const canvas = document.querySelector("#simscreen");
+const taskTitle = document.querySelector(".task-title");
+
+
+function displayDiv(ele) {
+  const taskScreen = document.querySelectorAll(".task-screen");
+  taskScreen.forEach((task) => {
+    task.classList.add("hide");
+  });
+  if (ele.classList.contains("tool-objective")) {
+    document.querySelector(".objective").classList.remove("hide");
+    taskTitle.textContent = "Objective";
+    document.getElementById("variables").style.display="none"
+  }
+  if (ele.classList.contains("tool-apparatus")) {
+    document.querySelector(".apparatus").classList.remove("hide");
+    taskTitle.textContent = "Apparatus";
+     document.getElementById("variables").style.display="none"
+  }
+  if (ele.classList.contains("tool-practice")) {
+    document.querySelector(".practice").classList.remove("hide");
+    taskTitle.textContent = "Experiment";
+     document.getElementById("variables").style.display="block"
+   
+  }
+}
+
 let size = 30;
 let pcheck;
 let gly_d = 1260;
@@ -45,8 +73,8 @@ function next() {
         document.getElementById("content").style.display = 'block';
         document.getElementById("content2").style.display = 'none';
     } else if (a == 2) {
-        document.getElementById("Slider").disabled = true;
-        document.getElementById("Slider").style.opacity = 0.5;
+        // document.getElementById("Slider").disabled = true;
+        // document.getElementById("Slider").style.opacity = 0.5;
         document.getElementById("buttondown").style.display = 'block';
         document.getElementById("content").style.display = 'none';
         document.getElementById("buttonup").style.display = 'none';
@@ -89,18 +117,18 @@ function update() {
 
 }
 
-document.getElementById("Slider").addEventListener("change", slidercurrent);
+// document.getElementById("Slider").addEventListener("change", slidercurrent);
 
-function slidercurrent() {
-    size = Slider.value;
-    document.getElementById("diameter").innerHTML = (size - 10) + " mm";
-    let img = document.getElementById("copperball");
-    let img1 = document.getElementById("glassball");
-    img.style.width = `${size}px`;
-    img.style.height = `${size}px`;
-    img1.style.width = `${size}px`;
-    img1.style.height = `${size}px`;
-}
+// function slidercurrent() {
+//     size = Slider.value;
+//     document.getElementById("diameter").innerHTML = (size - 10) + " mm";
+//     let img = document.getElementById("copperball");
+//     let img1 = document.getElementById("glassball");
+//     img.style.width = `${size}px`;
+//     img.style.height = `${size}px`;
+//     img1.style.width = `${size}px`;
+//     img1.style.height = `${size}px`;
+// }
 
 
 function insert() {
@@ -114,8 +142,8 @@ function insert() {
         document.getElementById("remove").style.display = 'block';
         document.getElementById("insert").style.display = 'none';
         document.getElementById("drop").disabled = false;
-        document.getElementById("Slider").disabled = true;
-        document.getElementById("Slider").style.opacity = 0.5;
+        // document.getElementById("Slider").disabled = true;
+        // document.getElementById("Slider").style.opacity = 0.5;
         if (pcheck == true) {
             document.getElementById("cball1").style.display = 'block';
             document.getElementById("copperball").style.display = 'none';
@@ -212,27 +240,6 @@ function updateliquid() {
 
 }
 
-// function help() {
-//     document.getElementById('instructions').style.display = 'block';
-//     document.getElementById('blocker').style.display = 'block';
-// }
-// function close(){
-//     document.getElementById('instructions').style.display = 'none';
-//     document.getElementById('blocker').style.display = 'none';
-// }
-
-
-// ball diameter slider
-// let cslider = document.getElementById("balldiameter");
-// let coutput = document.getElementById("diameter");
-// coutput.innerHTML = cslider.value;
-// cslider.oninput = function () {
-//     coutput.innerHTML = size;
-// }
-
-// meu = (2 / 9) * (((r * r * 9.8)(ball_density - liq_density)) / v);
-
-
 function timer() {
     setTimeout(starttim, 1000);
     setTimeout(stoptim, 4010);
@@ -325,37 +332,7 @@ function timer() {
 function result() {
     document.getElementById("resulttext").style.display = 'block';
     document.getElementById('resliquid').innerHTML = res_liquid;
-    // viscocity();
-    // if (optionball == 'copperball' && optionliq == 'glycerine') {
-    //     v = 4.5 ;
-    //     ball_density = 8600;
-    //     liq_density = 1260;
-    // } else if (optionball == 'copperball' && optionliq == 'water') {
-    //     v = 6.5;
-    //     ball_density = 8600;
-    //     liq_density = 997;
-    // } else if (optionball == 'copperball' && optionliq == 'honey') {
-    //     v = 2.5;
-    //     ball_density = 8600;
-    //     liq_density = 1420;
-    // } else if (optionball == 'glassball' && optionliq == 'glycerine') {
-    //     v = 3;
-    //     ball_density = 2600;
-    //     liq_density = 1260;
-    // } else if (optionball == 'glassball' && optionliq == 'water') {
-    //     v = 5.5;
-    //     ball_density = 2600;
-    //     liq_density = 997;
-    // } else if (optionball == 'glassball' && optionliq == 'honey') {
-    //     v = 1.5;
-    //     ball_density = 2600;
-    //     liq_density = 1420;
-    // }
-    // // size = Slider.value;
-    // r = ((size - 10) / 2)/1000;
-    // meu = (2 / 9) * (((r * r * 9.8) * (ball_density - liq_density)) / v);
-    // meu = meu.toFixed(2);
-
+   
     if (optionliq == 'glycerine') {
         meu = 0.95;
     } else if (optionliq == 'water') {
@@ -365,3 +342,5 @@ function result() {
     }
     document.getElementById('viscocity').innerHTML = meu + ' Nm^ -2s';
 }
+
+
