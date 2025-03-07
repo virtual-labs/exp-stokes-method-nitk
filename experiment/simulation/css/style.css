@@ -52,7 +52,7 @@ h1 {
   );
   box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.55);
 }
-.box{
+.box {
   cursor: pointer;
 }
 .left-top {
@@ -145,19 +145,19 @@ h1 {
 
 #timerbox #seconds,
 #timerbox #tens {
-    font-size: 30px; /* Adjust as per the requirement */
-    color: #333;     /* Change the color if necessary */
+  font-size: 30px; /* Adjust as per the requirement */
+  color: #333; /* Change the color if necessary */
 }
 
 .one {
-  font-size: 24px;  /* Adjust the size to your preference */
-  font-weight: bold;  /* Optional, to make the text bold */
+  font-size: 24px; /* Adjust the size to your preference */
+  font-weight: bold; /* Optional, to make the text bold */
 }
 
 /* Or, apply font size specifically to the <p> tag inside .one */
 .one p {
-  font-size: 22px;  /* Adjust the size to your preference */
-  font-weight: bold;  /* Optional */
+  font-size: 22px; /* Adjust the size to your preference */
+  font-weight: bold; /* Optional */
 }
 /* .main__task-div footer{
   margin-bottom: 50px;
@@ -299,8 +299,6 @@ h1 {
   overflow-x: hidden;
 }
 
-
-
 .practice {
   display: flex;
   flex-direction: column;
@@ -308,19 +306,19 @@ h1 {
   /* padding: 9rem; */
   position: relative;
 }
-.apparatus{
+.apparatus {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding: 9rem;
   position: relative;
 }
-.objective{
+.objective {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding: 13rem;
-  position: relative; 
+  position: relative;
 }
 .objective__title,
 .apparatus__title {
@@ -366,8 +364,6 @@ h1 {
 .tool-img {
   width: 100%;
 }
-
-
 
 .practice-steps {
   font-style: 1.8rem;
@@ -458,7 +454,7 @@ h1 {
   grid-column: 1/-1;
   letter-spacing: 0.2rem;
 }
-.btn:disabled {
+.insert-reset-observation button:disabled {
   background-image: linear-gradient(
     to bottom,
     var(--clr-body-clr),
@@ -541,7 +537,7 @@ h1 {
 canvas {
   width: 80%;
   height: 100%;
-  margin: 0 auto;;
+  margin: 0 auto;
 }
 
 .tooltip {
@@ -582,7 +578,7 @@ canvas {
   gap: 1rem;
 }
 
-.variables-sections{
+.variables-sections {
   padding: 1rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -688,14 +684,11 @@ canvas {
   bottom: -100%;
   color: #000;
 }
-.simscreen1{
-
+.simscreen1 {
   position: relative;
-
 }
-.btn-A{
-
-  padding:1rem;
+.btn-A {
+  padding: 1rem;
   font-weight: 700;
   border: none;
   background-image: linear-gradient(
@@ -707,9 +700,8 @@ canvas {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.2s;
-
 }
-.btn-A:disabled{
+.btn-A:disabled {
   background-image: linear-gradient(
     to bottom,
     var(--clr-body-clr),
@@ -718,9 +710,8 @@ canvas {
   color: var(--clr-side-background3);
   cursor: not-allowed;
 }
-.btn-B{
-
-  padding:1rem;
+.btn-B {
+  padding: 1rem;
   font-weight: 700;
   border: none;
   background-image: linear-gradient(
@@ -732,9 +723,8 @@ canvas {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.2s;
-
 }
-.btn-B:disabled{
+.btn-B:disabled {
   background-image: linear-gradient(
     to bottom,
     var(--clr-body-clr),
@@ -743,9 +733,8 @@ canvas {
   color: var(--clr-side-background3);
   cursor: not-allowed;
 }
-.btn-B1{
-
-  padding:1rem;
+.btn-B1 {
+  padding: 1rem;
   font-weight: 700;
   border: none;
   background-image: linear-gradient(
@@ -757,9 +746,8 @@ canvas {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.2s;
-
 }
-.btn-B1:disabled{
+.btn-B1:disabled {
   background-image: linear-gradient(
     to bottom,
     var(--clr-body-clr),
@@ -768,9 +756,8 @@ canvas {
   color: var(--clr-side-background3);
   cursor: not-allowed;
 }
-.btn-c{
-
-  padding:1rem;
+.btn-c {
+  padding: 1rem;
   font-weight: 700;
   border: none;
   background-image: linear-gradient(
@@ -782,9 +769,8 @@ canvas {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.2s;
-
 }
-.btn-c:disabled{
+.btn-c:disabled {
   background-image: linear-gradient(
     to bottom,
     var(--clr-body-clr),
@@ -793,72 +779,71 @@ canvas {
   color: var(--clr-side-background3);
   cursor: not-allowed;
 }
-#image1{
+#image1 {
   transform-origin: bottom right;
-  transform:rotate(30deg);
-  position: absolute; 
+  transform: rotate(30deg);
+  position: absolute;
   left: 59%;
   top: 15%;
   width: 12%;
   height: 33%;
-  opacity:1 ;
+  opacity: 1;
   display: none;
- }
- #image{
-        
+}
+#image {
   transform-origin: bottom left;
-  transform:rotate(-30deg);
+  transform: rotate(-30deg);
   position: absolute;
   left: 32%;
   top: 15%;
   width: 12%;
   height: 33%;
-  opacity:1 ;
+  opacity: 1;
   display: none;
-
 }
-#image3{
+#image3 {
   z-index: 3;
   display: inline-block;
   transform-origin: bottom left;
   -webkit-transform: rotate(-20deg);
--moz-transform: rotate(-20deg);
--o-transform: rotate(-20deg); 
-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
   position: absolute;
   /* left: 37.5%;
   top: 35.2%; */
   width: 15%;
   height: 33%;
-  opacity:1 ;
+  opacity: 1;
   display: none;
-
 }
 input[type="radio"] {
   cursor: pointer;
 }
- 
-    .practice-step-button{
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .radioGroup {
-      display: flex;
-      align-items: center;
-  }
-  #shapeDropdown{
-    border: 2px solid var(--clr-title-background);
-    border-radius: 8%;
-    padding: 3%;
-  }
-  #shapeDropdown option{
-    background-color: var(--clr-title-background); /* Background color for options */
-            color: #fff; /* Text color for options */
-  }
-  .shapeDrop {
-      margin-left: 2%;
-  }
+
+.practice-step-button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.radioGroup {
+  display: flex;
+  align-items: center;
+}
+#shapeDropdown {
+  border: 2px solid var(--clr-title-background);
+  border-radius: 8%;
+  padding: 3%;
+}
+#shapeDropdown option {
+  background-color: var(
+    --clr-title-background
+  ); /* Background color for options */
+  color: #fff; /* Text color for options */
+}
+.shapeDrop {
+  margin-left: 2%;
+}
 @keyframes highlight {
   0% {
     transform: scale(1);
@@ -897,9 +882,6 @@ input[type="radio"] {
   height: 80px;
   width: 120px;
 }
-
-
-
 
 .subtopics {
   width: 100%-20px;
@@ -993,7 +975,24 @@ input[type="radio"] {
   row-gap: 1rem;
   column-gap: 1rem;
 }
-#insert {
+
+.insert-reset-observation button {
+  font-size: 1.3rem;
+  padding: 4px;
+  border-radius: 0.5rem;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-side-background2),
+    var(--clr-side-background3)
+  );
+  color: var(--clr-text-clr);
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* #insert {
   font-size: 1.3rem;
   padding: 4px;
   border-radius: 0.5rem;
@@ -1068,7 +1067,7 @@ input[type="radio"] {
   border: none;
   cursor: pointer;
   margin-top: 4px;
-}
+} */
 .procedure {
   margin: 10px;
 }
@@ -1099,11 +1098,11 @@ input[type="radio"] {
   border-radius: 20px;
   cursor: pointer;
 }
-.one{
+.one {
   position: absolute;
   /* position: absolute; */
-    left: 91%;
-    top: 61%;
+  left: 91%;
+  top: 61%;
 }
 .slider {
   -webkit-appearance: none;
@@ -1113,8 +1112,8 @@ input[type="radio"] {
   background: black;
   outline: none;
   /* opacity: 0.5; */
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .slider:hover {
@@ -1136,7 +1135,6 @@ input[type="radio"] {
   width: 20px;
   height: 20px;
 }
-
 
 .blocker {
   display: none;
@@ -1195,7 +1193,7 @@ input[type="radio"] {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-#scaling{
+#scaling {
   display: flex;
   transform: scale(1);
   align-items: center;
@@ -1213,7 +1211,7 @@ input[type="radio"] {
   width: 600px;
   /* background-color: rgb(189, 65, 65); */
 }
-#image_container{
+#image_container {
   /* margin-left: -167px;
   display: grid;
   align-items: center;
@@ -1267,7 +1265,7 @@ input[type="radio"] {
   left: 485px;
   top: 395px;
   animation-duration: 5s;
-  transition: transform .3s;
+  transition: transform 0.3s;
   z-index: 2;
   /* background-color: red; */
   display: none;
@@ -1305,7 +1303,7 @@ input[type="radio"] {
   left: 485px;
   top: 395px;
   animation-duration: 3s;
-  transition: transform .3s;
+  transition: transform 0.3s;
   z-index: 2;
   /* background-color: red; */
   display: none;
@@ -1354,9 +1352,9 @@ input[type="radio"] {
     top: 11%;
     position: absolute;
 } */
-    /* font-size: 2rem; */
-    /* background-color: red; */
-    /* text-align: left;
+/* font-size: 2rem; */
+/* background-color: red; */
+/* text-align: left;
 }
 
 .text ol li {
@@ -1371,7 +1369,7 @@ input[type="radio"] {
 
 #timerbox {
   /* background-color: red; */
-  /* position: absolute;
+/* position: absolute;
   top: 392px;
   left: 630px;
   z-index: 4;
@@ -1392,9 +1390,3 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
 }
-
-
-
-
-
-
