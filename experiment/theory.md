@@ -34,10 +34,10 @@ Total upward force = downward force
 </center>
 
 &mu; ⟹ Viscosity of the liquid ( SI unit: Ns/m<sup>2</sup> )  
-r ⟹ radius of the metal sphere ( SI unit: m )  
+r ⟹ Radius of the metal sphere ( SI unit: m )  
 g ⟹ Acceleration due to gravity ( SI unit: m/s<sup>2</sup> )  
 ball ⟹ Density of the metal sphere ( SI unit: kg/m<sup>3</sup> )  
-l ⟹ density of the liquid ( SI unit: kg/m<sup>3</sup> )  
+l ⟹ Density of the liquid ( SI unit: kg/m<sup>3</sup> )  
 v ⟹ Terminal Velocity ( SI unit: m/s )
 
 </div>
