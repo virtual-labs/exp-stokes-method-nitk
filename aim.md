@@ -1,0 +1,1 @@
+To determine the coefficient of viscosity of a given viscous liquid by measuring terminal velocity of a given spherical body
