@@ -179,6 +179,8 @@ function remove() {
 }
 
 function dropball() {
+  document.getElementById("drop").disabled = true;
+  document.getElementById("remove").disabled = true;
   if (pcheck == true) {
     document.getElementById("cball2").style.height = `${size}px`;
     document.getElementById("cball1").style.display = "none";
@@ -327,7 +329,7 @@ function result() {
   } else if (optionliq == "honey") {
     meu = 10;
   }
-  document.getElementById("viscocity").innerHTML = meu + " Nm<sup>-2</sup>s";
+  document.getElementById("viscocity").innerHTML = meu + " Ns/m<sup>2</sup>";
 }
 
 //Reset button function
