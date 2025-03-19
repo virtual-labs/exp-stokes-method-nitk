@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "For a given glass ball in this experiment if you change the liquid from water to honey what happens to the velocity of the glass ball",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Velocity increases",
+        "b": "Velocity decreases",
+        "c": "No change in velocity",
+        "d": "First increase and then decrease"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If one performs the  same experiment in moon what do you expect the frictional force?",
+      "answers": {
+        "a": "Viscosity increases",
+        "b": "Viscosity decreases",
+        "c": "Viscosity does not change ",
+        "d": "No connection of planet and viscosity"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "For a non Newtonian liquid will the same procedure work?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It is applicable to non Newtonian liquid",
+        "b": "It is not applicable to non Newtonian liquid",
+        "c": "Viscosity has no connection whether the liquid is Newtonian or non Newtonian",
+        "d": "If the viscosity depends on shear stress the this procedure is applicable"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "If we increase the size of the ball, the viscous force also?",
+      "answers": {
+        "a": "First decrease then increase",
+        "b": "Viscous force decreases",
+        "c": "First increase then decrease",
+        "d": "Viscous force increases"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What happens to the viscosity when the temperature of the liquid increases?",
+      "answers": {
+        "a": "Viscosity decreases",
+        "b": "Viscosity increase",
+        "c": "Viscosity remains the same",
+        "d": "Viscosity is independent of temperature"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }

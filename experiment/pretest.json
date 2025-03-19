@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What type of force is Viscous force? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Conservative",
+        "b": "Non conservative",
+        "c": "Pseudo force",
+        "d": "Originated from nuclear force"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the crucial assumption on velocity of the dropped object in this experiment?",
+      "answers": {
+        "a": "As soon as we release the ball the object attains the terminal velocity",
+        "b": "It takes very long time to attain the terminal velocity",
+        "c": "It will never reach the terminal velocity during the complete motion",
+        "d": "Terminal velocity is always zero"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "If you use a spherical shaped container in this experiment rather than a cylindrical one to hold the liquid, will you expect any change in the viscosity of the liquid or do you have to modify the formula used?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Viscosity changes and formula has to be modified",
+        "b": "Viscosity changes but formula need not to be modified",
+        "c": "Viscosity will  not change and formula need not modified",
+        "d": "Viscosity will not change but formula has to be modified"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "When an object is dropped in a liquid, what all are the forces acting on it?",
+      "answers": {
+        "a": "Force due to gravity, Buoyent force, viscous force",
+        "b": "Force due to gravity, Buoyent force",
+        "c": "Buoyent force, viscous force",
+        "d": "Only Viscous force"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Choose the correct statement about viscous force",
+      "answers": {
+        "a": "The viscous force is independent of velocity",
+        "b": "The viscous force depends on the velocity",
+        "c": "The viscous force is independent of density ",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     }
   ]
 }
