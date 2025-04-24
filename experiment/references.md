@@ -11,7 +11,7 @@
     <li>University Physics with Modern Physics and MasteringPhysics (p. 1632). Academic Imports Sweden AB.</li>
   </ol>
    </td>
-    <td> Lab Developer : 
+    <td> Lab Developers : 
       <li>Dr. Ajith K M | NITK</li>
       <li>Dr. K V Gangadharan | NITK</li></br>
     Contributors :
