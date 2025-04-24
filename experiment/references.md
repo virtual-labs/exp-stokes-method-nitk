@@ -15,13 +15,12 @@
       <li>Dr. Ajith K M | NITK</li>
       <li>Dr. K V Gangadharan | NITK</li></br>
     Contributors :
-  <ul style="list-style-type: none;">
     <li>Dr. Sibeesh Padiyoor (177PH002) | NITK</li>
     <li>Samar K (21AD035) | KPRIET </li>
     <li>Praveen Samuel PM (21CS130) | KPRIET </li>
     <li>Vismaya M Kumar | NITK</li>
     <li>Akshaya | NITK</li>
     <li>Anusha B Salian | NITK</li>
-  </ul></td>
+  </td>
   </tr>
 </table>
