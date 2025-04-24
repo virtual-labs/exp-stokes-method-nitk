@@ -11,13 +11,15 @@
     <li>University Physics with Modern Physics and MasteringPhysics (p. 1632). Academic Imports Sweden AB.</li>
   </ol>
    </td>
-    <td>Developer : Dr. Ajith K M | NITK</br>
-    Developer : Dr. K V Gangadharan | NITK</br></br>
+    <td> Lab Developer : 
+      <li>Dr. Ajith K M | NITK</li>
+      <li>Dr. K V Gangadharan | NITK</li></br>
     Contributors :
   <ul style="list-style-type: none;">
-    <li>Sibeesh P.P | NITK</li>
-    <li>Samar K, 21AD035 | KPRIET </li>
-    <li>Praveen Samuel PM, 21CS130 | KPRIET </li>
+    <li>Dr. Sibeesh Padiyoor (177PH002) | NITK</li>
+    <li>Samar K (21AD035) | KPRIET </li>
+    <li>Praveen Samuel PM (21CS130) | KPRIET </li>
+    <li>Vismaya M Kumar | NITK</li>
     <li>Akshaya | NITK</li>
     <li>Anusha B Salian | NITK</li>
   </ul></td>
