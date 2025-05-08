@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <!-- <script defer src="https://code.jquery.com/jquery.min.js"></script> -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+    ></script>
+
+  </head>
+  <body>
+    <div class="title-div-container">
+      <div class="title-div">
+          <div class="logo-div">
+            <a href="#"><img src="images/logo_nitk.png" alt="Logo" class="logo" /></a>
+          </div>
+          <h1>VISCOSITY BY STOKE'S METHOD
+          </h1>
+        </div>
+      </div>
+    <div class="container">
+      <div class="sidebar">
+        <ul class="tool-menu">
+          <li class="tool-list tool-objective" onclick="displayDiv(this)">
+            <a class="tool-link" title="Objective"
+              >
+              <img src="./images/objective.png" alt="Objective" class="icons">
+            </a>
+            <span>Objective</span>
+          </li>
+          <li class="tool-list tool-apparatus" onclick="displayDiv(this)">
+            <a class="tool-link" title="Apparatus"
+              ><img src="./images/apparatus.png" alt="Objective" class="icons"></a
+              >
+              <span>Apparatus</span>
+          </li>
+          
+          <li class="tool-list tool-practice" onclick="displayDiv(this)">
+            <a class="tool-link" title="Experiment"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Experiment</span>
+          </li>
+
+          <li class="tool-list" onclick="Refresh()">
+            <a href="#" class="tool-link" id="refreshLink" title="Refresh">
+              <img
+                type="reset"
+                src="images/bluecwdull.svg"
+                alt="Refresh
+              Button"
+                class="icons"
+              />
+            </a>
+            <span class="refresh">Reset</span>
+          </li>
+          <li id="buttondown" onclick="down()" class="tool-list tool-practice" onclick="displayDiv(this)">
+            <a class="tool-link" title="back"
+              ><img src="images/arrow.png" alt="back" class="icons"
+              ></a
+              >
+              <span>nextimg</span>
+          </li>
+        </ul>
+      </div> 
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Objective</h3>
+           
+            <div class="canvas__div">
+              <div class="task-screen objective">
+                <!-- <h3 class="objective__title">Objective</h3> -->
+                <p class="objective__main">To determine the coefficient of viscosity of a given viscous liquid.
+
+                </p>
+               <div></div>
+
+               <!-- <div></div><div></div><div></div> -->
+              </div>
+              <div class="task-screen apparatus hide">
+                <!-- <h3 class="apparatus__title">Apparatus</h3> -->
+                <div class="apparatus-screen">
+                  <div class="apparatus-tool">
+                    <img src="images/measuringcylinder.png" class='img1' alt="Measuring Cylinder" class="tool-img">
+                    <span>Measuring Cylinder</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img src="images/copperball.png" class='img2' alt="Copper Ball" class="tool-img">
+                    <span>Copper Ball</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img src="images/glassball.png" class='img3' alt="Glass Ball" class="tool-img">
+                    <span>Glass Ball</span>
+                  </div>
+                  <div class="apparatus-tool">
+                    <img src="images/stopclock.png" class='img4' alt="Stop Clock" class="tool-img">
+                    <span>Stop Clock</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="task-screen practice hide">
+               
+                <div id="image_container" >
+                <div class="mainsimulation" id="mainsimulation">
+                  <div id="appdiv">
+                      <div id="gball2" class="gball2">
+                          <img src="images/glassball.png" alt="glassball" title="GLASS BALL" style="height: inherit;">
+                      </div>
+                      <div id="gball1" class="gball1">
+                          <img src="images/glassball.png" alt="glassball" title="GLASS BALL" style="height: inherit;">
+                      </div>
+                      <div id="gball1" class="gball1">
+                          <img src="images/glassball.png" alt="glassball" title="GLASS BALL" style="height: inherit;">
+                      </div>
+                      <img src="images/glassball.png" alt="glassball" id="glassball" class="glassball" title="GLASS BALL" style="display: none;">
+                      <div id="cball2" class="cball2">
+                          <img src="images/copperball.png" alt="copperball" title="COPPER BALL" style="height: inherit;">
+                      </div>
+                      <div id="cball1" class="cball1">
+                          <img src="images/copperball.png" alt="copperball" title="COPPER BALL" style="height: inherit;">
+                      </div>
+                      <img src="images/copperball.png" alt="copperball" id="copperball" class="copperball"
+                          title="COPPER BALL">
+                      <img src="images/stopwatch.png" alt="stopclock" class="stopclock" title="STOP CLOCK">
+                      <img src="images/ncylinder.png" alt="measuringcylinder" class="measuringcylinder"
+                          title="MEASURING CYLINDER">
+                      <img src="images/table.png" alt="table" class="table">
+                      <img src="images/glycerine.png" alt="glycerine" id="glycerine" class="glycerine" style="display: none;">
+                      <img src="images/honey.png" alt="honey" id="honey" class="honey" style="display: none;">
+                      <img src="images/water1.png" alt="water" id="water" class="water" style="display: none;">
+                  </div> 
+                  
+                  <div class="text" >
+                    <ol>
+                        <li>Distance between A and B = 1 m.</li>
+                        <li>Density of the liquid = <span id="liquiddensity">0</span></li>
+                        <li>Density of ball = <span id="balldensity">0</span></li>
+                    </ol>
+                </div>
+                <div class="one" >
+                    <p>1 m</p>
+                </div>
+                <div class="wrapper">
+                    <div id="timerbox"><p><span id="seconds">00</span>s:<span id="tens">00</span>ms</p></div>
+                  </div>
+                </div>
+                 
+                      <!-- <button id="button-start">Start</button> -->
+                      <!-- <button id="button-stop">Stop</button> -->
+                      <button id="button-reset" hidden>Reset</button>
+                  </div>
+             
+           
+      
+            </div>
+          </div></div></div>
+          <div id="variables" class="main__task-div" style="display: none;">
+            <div class="settings-sections">
+              <h3 class="task-title">Controls</h3>
+              <div class="comment-sections">
+                <div class="blocker" onclick="closeobservation()" id="blocker"></div>
+                <div class="simoptions" id="simoptions">
+                  <div class="grid2">
+                  <div class="procedure var-div">
+                      <label style="text-align:left;">Select the spherical ball:</label>
+                      <select name="exp" id="exp" onChange="update()">
+                          <option value="Empty" hidden>Select the Spherical Ball</option>
+                          <option value="copperball">Copper Ball</option>
+                          <option value="glassball">Glass Ball</option>
+                      </select>
+                      <label style="text-align:left;">Select viscous liquid:</label>
+                      <select name="exp" id="liquid" onchange="updateliquid()">
+                          <option value="Empty" hidden>Select the liquid</option>
+                          <option value="glycerine">Glycerine</option>
+                          <option value="water">Water</option>
+                          <option value="honey">Honey</option>
+                      </select>
+                  </div></div>
+                  <div class="balldiameter">
+                    <p><!-- Select the  -->Ball diameter: <span id="diameter">20 mm</span></p>
+                    <!-- <input type="range" min="15" max="35" step="5" class="slider" id="Slider" hidden> -->
+                </div>
+                <div id="grid1">
+                  <div class="insert-reset-observation">
+                      <button id="insert" type="button" onclick="insert()" disabled>Insert Ball</button>
+                      <button id="remove" type="button" onclick="remove()" style="display:none;font-size: 12px;">Remove
+                          Ball</button>
+                  </div>
+                  
+                  <div class="insert-reset-observation">
+                      <button id="drop" type="button" onclick="dropball()" disabled>Drop the Ball</button>
+                  </div>
+                  <div class="insert-reset-observation">
+                      <button id="reset" type="reset" onclick="Refresh()">Reset</button>
+                  </div>
+                  <div class="insert-reset-observation">
+                      <button id="result" type="button" onclick="result()" disabled>Result</button>
+                  </div>
+                </div>
+                  <div id="resulttext" style="display: none;">
+                      <p>Coefficient of Viscosity of</p>
+                      <p><span id="resliquid"></span>,η=<span id="viscocity">00</span></p>
+                  </div>
+                  <div class="help" hidden> <!-- hidden for now -->
+                      <!-- <button type="button" onclick="help()"><img src="images/help.png" alt="helpicon"></button> -->
+                  </div>
+              </div></div>
+         
+         
+            </div>
+         
+          
+         </div>
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="js/script.js"></script>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
